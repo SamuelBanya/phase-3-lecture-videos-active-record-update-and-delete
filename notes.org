@@ -1,0 +1,19 @@
+Here are the commands I used to code along with the assignment:
+#+begin_src ruby
+Author.update(bio: "is a cat")
+Author.second.update(bio: "Award winning biographer writer")
+
+# NOTE: This was attempted with the 'pry' breakpoint, but didn't result in an actual change:
+Author.third[:bio] = "Professor at University of Washington"
+
+# If we instead use a variable, we can make an actual change
+a3 = Author.third
+a3[:bio] = "Professor at University of Washington"
+a3.save()
+#+end_src
+
+She then used the following commands to 'delete' instances:
+#+begin_src ruby
+Author.last.destroy()
+Author.destroy_all()
+#+end_src
